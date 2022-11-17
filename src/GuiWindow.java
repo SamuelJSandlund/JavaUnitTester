@@ -1,16 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class GuiWindow {
 
-    private JFrame frame;
-    private JPanel upperPanel;
-    private JPanel middlePanel;
-    private JPanel lowerPanel;
+    private final JFrame frame;
     private JTextField inputField;
     private JButton startButton;
-    private JButton clearButton;
-    private JScrollPane scrollArea;
     private JTextArea outputArea;
 
 
@@ -19,9 +15,9 @@ public class GuiWindow {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
         frame.setSize(480, 360);
-        upperPanel = createUpperPanel();
-        middlePanel = createMiddlePanel();
-        lowerPanel = createLowerPanel();
+        JPanel upperPanel = createUpperPanel();
+        JPanel middlePanel = createMiddlePanel();
+        JPanel lowerPanel = createLowerPanel();
         frame.add(upperPanel, BorderLayout.NORTH);
         frame.add(middlePanel, BorderLayout.CENTER);
         frame.add(lowerPanel, BorderLayout.SOUTH);
@@ -33,6 +29,16 @@ public class GuiWindow {
     public void show(){
         frame.setVisible(true);
     }
+    public void output(String s){
+        outputArea.append(s);
+    }
+    public void listenForInput(ActionListener startButtonListener){
+        startButton.addActionListener(startButtonListener);
+    }
+    public String getInputField(){
+        return inputField.getText();
+    }
+
 
     /**
      * Creates a new JPanel with a text field for input and a button
@@ -44,7 +50,6 @@ public class GuiWindow {
         inputField = new JTextField("");
         panel.add(inputField, BorderLayout.CENTER);
         startButton = new JButton("Start Test");
-        startButton.addActionListener(a -> saySomething());
         panel.add(startButton, BorderLayout.EAST);
         return panel;
     }
@@ -60,7 +65,7 @@ public class GuiWindow {
         outputArea.setLineWrap(true);
         outputArea.setWrapStyleWord(true);
         outputArea.setEditable(false);
-        scrollArea = new JScrollPane(outputArea);
+        JScrollPane scrollArea = new JScrollPane(outputArea);
         scrollArea.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         panel.add(scrollArea, BorderLayout.CENTER);
         return panel;
@@ -68,13 +73,15 @@ public class GuiWindow {
 
     private JPanel createLowerPanel(){
         JPanel panel = new JPanel();
-        clearButton = new JButton("Clear");
+        JButton clearButton = new JButton("Clear");
         clearButton.addActionListener(a -> outputArea.setText(null));
         panel.add(clearButton);
         return panel;
     }
 
+    //TEST METHODS
     private void saySomething(){
         outputArea.append("Hola!\n");
     }
+
 }
