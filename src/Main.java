@@ -6,7 +6,7 @@ public class Main
     {
         SwingUtilities.invokeLater(() -> {
             GuiWindow gui = new GuiWindow();
-            gui.Show();
+            gui.show();
         });
     }
 }

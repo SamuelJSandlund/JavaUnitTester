@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56219e08-266a-4a80-9427-d1806915f6d8" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/GuiWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyInt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestClass.java" afterDir="false" />
+    <list default="true" id="56219e08-266a-4a80-9427-d1806915f6d8" name="Changes" comment="added GUI and given files">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GuiWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GuiWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +35,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "E:/Programming/IdeaProjects/MyUnitTester/src"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "E:/Programming/IdeaProjects/MyUnitTester/src",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -45,7 +45,14 @@
       <recent name="E:\Programming\IdeaProjects\MyUnitTester\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="FunctionalityTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FunctionalityTest" />
+      <module name="MyUnitTester" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="MyUnitTester" />
@@ -56,6 +63,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.FunctionalityTest" />
       </list>
     </recent_temporary>
   </component>
@@ -74,7 +82,13 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1668089225325</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="added GUI and given files">
+      <created>1668360839070</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1668360839070</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -90,6 +104,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="added GUI and given files" />
+    <option name="LAST_COMMIT_MESSAGE" value="added GUI and given files" />
   </component>
 </project>
