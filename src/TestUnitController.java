@@ -11,8 +11,15 @@ public class TestUnitController {
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            String s = view.getInputField();
-            view.output(s.toUpperCase() + "\n");
+            try {
+                Class<?> c = Class.forName(view.getInputField());
+                TestRunner tester = new TestRunner(c, view);
+                tester.execute();
+            }
+            catch (ClassNotFoundException ex)
+            {
+                view.output("ERROR: Entered class not found\n");
+            }
         }
     }
 }

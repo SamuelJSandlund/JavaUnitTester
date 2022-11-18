@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56219e08-266a-4a80-9427-d1806915f6d8" name="Changes" comment="Updated GUI">
-      <change afterPath="$PROJECT_DIR$/src/TestUnitController.java" afterDir="false" />
+    <list default="true" id="56219e08-266a-4a80-9427-d1806915f6d8" name="Changes" comment="Added action listener to controller">
+      <change afterPath="$PROJECT_DIR$/src/TestRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GuiWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GuiWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/se/umu/cs/unittest/TestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestUnitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestUnitController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,13 +36,15 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;E:/Programming/IdeaProjects/MyUnitTester/src&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programming\IdeaProjects\MyUnitTester\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Programming\IdeaProjects\MyUnitTester\src" />
     </key>
   </component>
@@ -94,7 +97,13 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1668698743302</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Added action listener to controller">
+      <created>1668727111297</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1668727111297</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,6 +121,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="added GUI and given files" />
     <MESSAGE value="Updated GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated GUI" />
+    <MESSAGE value="Added action listener to controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added action listener to controller" />
   </component>
 </project>
