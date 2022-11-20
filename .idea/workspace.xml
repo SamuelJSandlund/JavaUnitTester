@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="MyUnitTester:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="56219e08-266a-4a80-9427-d1806915f6d8" name="Changes" comment="Added action listener to controller">
-      <change afterPath="$PROJECT_DIR$/src/TestRunner.java" afterDir="false" />
+    <list default="true" id="56219e08-266a-4a80-9427-d1806915f6d8" name="Changes" comment="Finished basic functionality (beta 1.0)">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/MyUnitTester.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestRunnerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/se/umu/cs/unittest/TestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyUnitTester.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MyUnitTester.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GuiWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GuiWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestUnitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestUnitController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +26,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/TestRunner.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -32,20 +45,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Programming/IdeaProjects/MyUnitTester/src&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "last_opened_file_path": "C:/Users/Samuel/Desktop/jarfile",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Programming\IdeaProjects\MyUnitTester\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Programming\IdeaProjects\MyUnitTester\src" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -63,9 +93,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyUnitTester.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/MyUnitTester_jar/MyUnitTester.jar" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JAR Application.MyUnitTester.jar" />
         <item itemvalue="Application.FunctionalityTest" />
       </list>
     </recent_temporary>
@@ -103,7 +138,13 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1668727111297</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Finished basic functionality (beta 1.0)">
+      <created>1668803714415</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1668803714415</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +163,7 @@
     <MESSAGE value="added GUI and given files" />
     <MESSAGE value="Updated GUI" />
     <MESSAGE value="Added action listener to controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added action listener to controller" />
+    <MESSAGE value="Finished basic functionality (beta 1.0)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished basic functionality (beta 1.0)" />
   </component>
 </project>

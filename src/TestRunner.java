@@ -5,14 +5,16 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
 
-
 /**
- * TODO: Möjligtvis flytta lite error checks till controller (skicka hit object), snygga till kod
+ * Checks for and executes test methods from a given class and prints results to a given GUI
+ *
+ * @author Samuel Sandlund
+ * @version 1.0
+ * @since 2022-11-21
  */
 public class TestRunner extends SwingWorker<String, String> {
     private final Class<?> testClass;
     private final GuiWindow outputGui;
-
     private int successes;
     private int fails;
     private int exceptionFails;
@@ -37,13 +39,12 @@ public class TestRunner extends SwingWorker<String, String> {
         Object classInstance = getInstance(testClass);
         //check that the class could be instantiated
         if(classInstance == null){
-            outputGui.output("ERROR: The entered class could not be instantiated\n");
             failed = true;
             return "failed";
         }
         //check that the class implements TestClass interface
         if(!(classInstance instanceof TestClass)){
-            outputGui.output("ERROR: Class does not implement the 'TestClass' interface\n");
+            publish("ERROR: Class does not implement the 'TestClass' interface");
             failed = true;
             return "failed";
         }
@@ -53,11 +54,11 @@ public class TestRunner extends SwingWorker<String, String> {
         //loop through all methods in class
         for(Method m : methods){
             //test only methods that follow our definition of a test
-            if(m.getName().startsWith("test")
+            if(!(m.getName().startsWith("test")
                     && m.getReturnType().getName().equals("boolean")
                     && m.getParameterCount() == 0
-            ){
-                try{
+            )){continue;}
+            try{
                     if(setUp != null){setUp.invoke(classInstance);}
                     runTest(m, classInstance);
                     if(tearDown != null){tearDown.invoke(classInstance);}
@@ -73,11 +74,14 @@ public class TestRunner extends SwingWorker<String, String> {
                     failed = true;
                     return "failed";
                 }
-            }
         }
         return "success";
     }
 
+    /**
+     * Prints strings to GUI
+     * @param chunks intermediate results to process
+     */
     @Override
     protected void process(List<String> chunks){
         for(String s : chunks){
@@ -85,6 +89,9 @@ public class TestRunner extends SwingWorker<String, String> {
         }
     }
 
+    /**
+     * If all test were completed correctly prints test summary to GUI
+     */
     @Override
     protected void done(){
         if(!failed){
@@ -92,13 +99,24 @@ public class TestRunner extends SwingWorker<String, String> {
         }
     }
 
+    /**
+     * Prints test summary to GUI
+     */
     private void printResults(){
         outputGui.output("\n");
         outputGui.output("Tests passed: " + successes + "\n");
         outputGui.output("Tests failed: " + fails + "\n");
         outputGui.output("Tests failed due to exception: " + exceptionFails + "\n");
+        outputGui.output("\n");
     }
 
+    /**
+     * Searches for a method of name "methodName" in the class "c" and returns a Method object
+     * if it is found.
+     * @param c Class in which to look for the method
+     * @param methodName Name of the method to be looked for
+     * @return If the class has the named method returns the method, else returns null
+     */
     private Method checkForMethod(Class<?> c, String methodName){
         try{
             return c.getMethod(methodName);
@@ -108,6 +126,11 @@ public class TestRunner extends SwingWorker<String, String> {
         }
     }
 
+    /**
+     * Tries to create an object of the class "c" using its declared constructor.
+     * @param c Class to be instantiated
+     * @return An object of the class given as parameter or null if the class could not be instantiated
+     */
     private Object getInstance(Class<?> c) {
         try {
             return c.getDeclaredConstructor().newInstance();
@@ -130,6 +153,12 @@ public class TestRunner extends SwingWorker<String, String> {
         }
     }
 
+    /**
+     * Runs the test method "m" from the object "instance"
+     * @param m: Method to be executed
+     * @param instance: Object from with to invoke the method
+     * @throws IllegalAccessException if the given object can not execute the given method
+     */
     private void runTest(Method m, Object instance) throws IllegalAccessException {
         try {
             if((boolean) m.invoke(instance)){
@@ -142,7 +171,7 @@ public class TestRunner extends SwingWorker<String, String> {
             }
         }
         catch (InvocationTargetException e) {
-            publish(m.getName() + ": FAIL, threw " + e.getCause().getClass().getSimpleName());
+            publish(m.getName() + ": FAIL, generated " + e.getCause().getClass().getSimpleName());
             exceptionFails++;
         }
     }
