@@ -59,21 +59,21 @@ public class TestRunner extends SwingWorker<String, String> {
                     && m.getParameterCount() == 0
             )){continue;}
             try{
-                    if(setUp != null){setUp.invoke(classInstance);}
-                    runTest(m, classInstance);
-                    if(tearDown != null){tearDown.invoke(classInstance);}
-                }
-                catch (IllegalAccessException e){
-                    publish("ERROR: The method '" + m.getName() + "' could not be accessed");
+                if(setUp != null){setUp.invoke(classInstance);}
+                runTest(m, classInstance);
+                if(tearDown != null){tearDown.invoke(classInstance);}
+            }
+            catch (IllegalAccessException e){
+                publish("ERROR: The method '" + m.getName() + "' could not be accessed");
                     failed = true;
                     return "failed";
-                }
-                catch (InvocationTargetException e)
-                {
-                    publish("ERROR: setUp or tearDown threw a " + e.getCause().getClass().getSimpleName());
-                    failed = true;
-                    return "failed";
-                }
+            }
+            catch (InvocationTargetException e)
+            {
+                publish("ERROR: setUp or tearDown threw a " + e.getCause().getClass().getSimpleName());
+                failed = true;
+                return "failed";
+            }
         }
         return "success";
     }

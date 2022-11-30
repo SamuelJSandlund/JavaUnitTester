@@ -1,5 +1,3 @@
-import javax.swing.*;
-
 /**
  * A simple implementation of a unit tester similar to JUnit 3
  *
@@ -9,10 +7,6 @@ import javax.swing.*;
  */
 public class Main {
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            GuiWindow gui = new GuiWindow();
-            TestUnitController controller = new TestUnitController(gui);
-            gui.show();
-        });
+        TestUnitController controller = new TestUnitController();
     }
 }

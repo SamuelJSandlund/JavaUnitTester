@@ -6,13 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56219e08-266a-4a80-9427-d1806915f6d8" name="Changes" comment="Finished basic functionality (beta 1.0)">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/MyUnitTester.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestRunnerTest.java" afterDir="false" />
+    <list default="true" id="56219e08-266a-4a80-9427-d1806915f6d8" name="Changes" comment="Build for 1st submission">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyUnitTester.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MyUnitTester.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GuiWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GuiWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestUnitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestUnitController.java" afterDir="false" />
@@ -25,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -34,7 +29,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/TestRunner.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/MyInt.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/TestRunner.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/TestUnitController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/se/umu/cs/unittest/TestClass.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/testclasses/AbstractTestClass.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/testclasses/TestClassWithBrokenConstructor.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/testclasses/TestClassWithBrokenSetUp.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/testclasses/VerySimpleTestClass.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -57,11 +60,11 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "C:/Users/Samuel/Desktop/jarfile",
+    "last_opened_file_path": "E:/Programming/IdeaProjects/MyUnitTester",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -93,6 +96,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestRunnerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyUnitTester" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestRunnerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyUnitTester.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/MyUnitTester_jar/MyUnitTester.jar" />
       <method v="2" />
@@ -101,6 +113,7 @@
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="JAR Application.MyUnitTester.jar" />
+        <item itemvalue="JUnit.TestRunnerTest" />
         <item itemvalue="Application.FunctionalityTest" />
       </list>
     </recent_temporary>
@@ -144,7 +157,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1668803714415</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Build for 1st submission">
+      <created>1668975399348</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1668975399348</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,6 +183,7 @@
     <MESSAGE value="Updated GUI" />
     <MESSAGE value="Added action listener to controller" />
     <MESSAGE value="Finished basic functionality (beta 1.0)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished basic functionality (beta 1.0)" />
+    <MESSAGE value="Build for 1st submission" />
+    <option name="LAST_COMMIT_MESSAGE" value="Build for 1st submission" />
   </component>
 </project>

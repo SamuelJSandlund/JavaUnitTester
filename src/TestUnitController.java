@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -9,11 +10,14 @@ import java.awt.event.ActionListener;
  * @since 2022-11-21
  */
 public class TestUnitController {
-    private final GuiWindow view;
+    private GuiWindow view;
 
-    public TestUnitController(GuiWindow view){
-        this.view = view;
-        view.listenForInput(new runTestButtonListener());
+    public TestUnitController(){
+        SwingUtilities.invokeLater(() ->{
+            view = new GuiWindow();
+            view.listenForInput(new runTestButtonListener());
+            view.show();
+        });
     }
 
     /**
