@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
  * Defines and creates a GUI for MyUnitTester
  *
  * @author Samuel Sandlund
- * @version 1.0
+ * @version 1.1
  * @since 2022-11-21
  */
 public class GuiWindow {
@@ -42,7 +42,7 @@ public class GuiWindow {
      * @param s String: The message to be printed
      */
     public void output(String s){
-        SwingUtilities.invokeLater(() -> outputArea.append(s));
+        SwingUtilities.invokeLater(() -> outputArea.append(s + "\n"));
     }
 
     /**
